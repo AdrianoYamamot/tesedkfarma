@@ -78,7 +78,7 @@ export function popperGenerator(generatorOptions) {
         }); // Validate the provided modifiers so that the consumer will get warned
         // if one of the modifiers is invalid for any reason
 
-        if (false) {
+        if (process.env.NODE_ENV !== "production") {
           var modifiers = uniqueBy([].concat(orderedModifiers, state.options.modifiers), function (_ref) {
             var name = _ref.name;
             return name;
@@ -130,7 +130,7 @@ export function popperGenerator(generatorOptions) {
         // anymore
 
         if (!areValidElements(reference, popper)) {
-          if (false) {
+          if (process.env.NODE_ENV !== "production") {
             console.error(INVALID_ELEMENT_ERROR);
           }
 
@@ -159,7 +159,7 @@ export function popperGenerator(generatorOptions) {
         var __debug_loops__ = 0;
 
         for (var index = 0; index < state.orderedModifiers.length; index++) {
-          if (false) {
+          if (process.env.NODE_ENV !== "production") {
             __debug_loops__ += 1;
 
             if (__debug_loops__ > 100) {
@@ -205,7 +205,7 @@ export function popperGenerator(generatorOptions) {
     };
 
     if (!areValidElements(reference, popper)) {
-      if (false) {
+      if (process.env.NODE_ENV !== "production") {
         console.error(INVALID_ELEMENT_ERROR);
       }
 

@@ -1,3 +1,7 @@
 // @flow
+import { createPopper, popperGenerator, detectOverflow } from './createPopper';
 
-export * from '../../lib/popper-base.js'
+export type * from './types';
+
+// eslint-disable-next-line import/no-unused-modules
+export { createPopper, popperGenerator, detectOverflow };
